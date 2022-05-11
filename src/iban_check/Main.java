@@ -41,6 +41,7 @@ public class Main {
         ArrayList<File> inputFiles = filesListInput.ListFiles(inputDirectory);
         File outputFolder = new File(outputDirectory);
         if (!outputFolder.exists()) {
+            System.out.print(ANSI_YELLOW + outputDirectory + " do not exist " + ANSI_RESET);
              if(outputFolder.mkdir()) {
                  System.out.println(ANSI_YELLOW + outputDirectory + " created " + ANSI_RESET);
              }
