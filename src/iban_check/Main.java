@@ -1,6 +1,9 @@
 package iban_check;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -36,6 +39,14 @@ public class Main {
         System.out.println(ANSI_PURPLE+"Looking in directory " +outputDirectory+ANSI_RESET);
 
         ArrayList<File> inputFiles = filesListInput.ListFiles(inputDirectory);
+        File outputFolder = new File(outputDirectory);
+        if (!outputFolder.exists()) {
+             if(outputFolder.mkdir()) {
+                 System.out.println(ANSI_YELLOW + outputDirectory + " created " + ANSI_RESET);
+             }
+        }
+
+
         ArrayList<File> outputFiles = filesListOutput.ListFiles(outputDirectory);
         if(outputFiles.isEmpty()) {
             if(!inputFiles.isEmpty()) {
