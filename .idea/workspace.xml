@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98fd59c0-33f2-480b-bb24-f4bbfd847bc6" name="Changes" comment="" />
+    <list default="true" id="98fd59c0-33f2-480b-bb24-f4bbfd847bc6" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/output/UNITED_KINGDOM" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/ANDORRA" beforeDir="false" afterPath="$PROJECT_DIR$/output/ANDORRA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/ESTONIA" beforeDir="false" afterPath="$PROJECT_DIR$/output/ESTONIA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/LITHUANIA" beforeDir="false" afterPath="$PROJECT_DIR$/output/LITHUANIA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,6 +100,13 @@
       <option name="presentableId" value="Default" />
       <updated>1652214065887</updated>
     </task>
+    <task id="LOCAL−00001" summary="1">
+      <created>1652276749584</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1652276749584</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,5 +119,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>

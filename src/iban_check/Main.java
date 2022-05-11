@@ -40,8 +40,6 @@ public class Main {
         if(outputFiles.isEmpty()) {
             if(!inputFiles.isEmpty()) {
                 int MAX_THREDS = 4;
-                System.out.println(ANSI_CYAN+"PROGRESS |=                                |\r"+ANSI_RESET);
-                inputFiles.forEach(el -> System.out.println(ANSI_GREEN + "Founded file " + el + ANSI_RESET));
                 ExecutorService pool = Executors.newFixedThreadPool(MAX_THREDS);
                 for (int i = 0; i < inputFiles.size(); i++) {
                     Work work = new Work(String.valueOf(i), inputFiles.get(i), outputDirectory);
@@ -55,6 +53,8 @@ public class Main {
             System.out.println(ANSI_RED+"Output direcroty "+outputDirectory+" is not empty."+ANSI_RESET);
             outputFiles.forEach(el -> System.out.println(ANSI_RED + "Founded file " + el + ANSI_RESET));
         }
+        System.out.println(ANSI_GREEN +"----------------------- Work Stats ---------------------- "+ ANSI_RESET);
+        inputFiles.forEach(el -> System.out.println(ANSI_GREEN + "Founded file " + el + ANSI_RESET));
     }
 
 }
