@@ -10,24 +10,26 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ListFiles {
-    private String directory;
+    private final String directory;
     private int fileCount = 0;
     ArrayList<File> fileList = new ArrayList<>();
 
-    public ArrayList<File> ListFiles(String directory) {
+    public ListFiles(String directory) {
         this.directory = directory;
+    }
+
+    public ArrayList<File> ListFilesWork() {
         try {
             List<File> files = Files.list(Paths.get(this.directory))
                     .map(Path::toFile)
                     .filter(File::isFile)
                     .collect(Collectors.toList());
-
-            files.forEach(el -> fileList.add(el) );
+            fileList.addAll(files);
         } catch (IOException e) {
             e.printStackTrace();
         }
         fileCount = fileList.size();
-        return  fileList;
+        return fileList;
     }
 
     public int getFileCount() {
@@ -36,10 +38,5 @@ public class ListFiles {
 
     public ArrayList<File> getFileList() {
         return fileList;
-    }
-
-    @Override
-    public String toString() {
-        return "fileList= "+ fileList;
     }
 }

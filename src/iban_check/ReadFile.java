@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ReadFile  {
-    private File inputFile;
-    private String outputDirectory;
+    private final File inputFile;
+    private final String outputDirectory;
     private ArrayList<String> failoStatistika ;
 
     public ReadFile(File inputFile, String outputDirectory) {
@@ -29,7 +29,7 @@ public class ReadFile  {
                 String line = myReader.nextLine();
                 if (!line.equals("")) {
                     linesCount++;
-                    IBANcustomValidator ibaNcustomValidator = new IBANcustomValidator(line);
+                    IbanCustomValidator ibaNcustomValidator = new IbanCustomValidator(line);
                     String outputFile = this.outputDirectory+"/"+ibaNcustomValidator.getCountry();
                     if (ibaNcustomValidator.isValid()) {
                         line = line+";true";
@@ -53,7 +53,7 @@ public class ReadFile  {
             failoStatistika.add("File name: "+file.getName()+" write error: "+writeError);
             myReader.close();
         } catch (Exception e) {
-            System.out.println(Main.ANSI_RED+"File "+file.getName()+" read error occurred. At line "+linesCount+" Error: "+e.getMessage()+Main.ANSI_RESET);
+            System.out.println(CollorCodes.ANSI_RED.ansiCode+"File "+file.getName()+" read error occurred. At line "+linesCount+" Error: "+e.getMessage()+CollorCodes.ANSI_RESET.ansiCode);
         }
         return failoStatistika;
     }

@@ -1,34 +1,30 @@
 package iban_check;
 
 
-public class IBANcustomValidator {
-    private String country;
-    private String countryCode;
+public class IbanCustomValidator {
+    private final String country;
+    private final String countryCode;
     private String ibanFormat;
     private boolean isValid;
     private int lengthConstant;
-    private String iBAN;
-    private String bban;
+    private final String iBan;
+    private String bBan;
 
-    public IBANcustomValidator(String iBAN) {
-        this.iBAN = iBAN;
-        this.countryCode = iBAN.substring(0,2);
+    public IbanCustomValidator(String iBan) {
+        this.iBan = iBan;
+        this.countryCode = iBan.substring(0, 2);
         String[] lineConst = IbanData.getIbanDataByCountryCode(countryCode);
 
         if (lineConst.length > 0) {
             this.lengthConstant = Integer.parseInt(lineConst[1]);
             this.country = lineConst[0];
-            this.bban = lineConst[2];
+            this.bBan = lineConst[2];
             this.ibanFormat = lineConst[3];
-            if (iBAN.length() == this.lengthConstant) {
-                this.isValid = true;
-            } else {
-                this.isValid = false;
-            }
+            this.isValid = iBan.length() == this.lengthConstant;
         } else {
             this.country = "OTHER";
             this.isValid = false;
-            System.out.println(Main.ANSI_RED+"IBAN number "+iBAN+" not in COUNTRY table."+Main.ANSI_RESET);
+            System.out.println(CollorCodes.ANSI_RED.ansiCode + "IBAN number " + iBan + " not in COUNTRY table." + CollorCodes.ANSI_RESET.ansiCode);
         }
     }
 
@@ -45,7 +41,7 @@ public class IBANcustomValidator {
     }
 
     public String getBban() {
-        return bban;
+        return bBan;
     }
 
     public int getLengthConstant() {

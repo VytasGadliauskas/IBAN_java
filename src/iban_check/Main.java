@@ -1,56 +1,47 @@
 package iban_check;
 
 import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+
 public class Main {
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
-
-
 
     public static void main(String[] args) {
-        ListFiles filesListInput = new ListFiles();
-        ListFiles filesListOutput = new ListFiles();
+
         Scanner in = new Scanner(System.in);
-        System.out.println(ANSI_BLUE+"Entered input directory path [for default './input' pres ENTER]"+ANSI_RESET);
+        System.out.println(CollorCodes.ANSI_BLUE.ansiCode + "Entered input directory path [for default './input' pres ENTER]"
+                + CollorCodes.ANSI_RESET.ansiCode);
         String inputDirectory = in.nextLine();
-        if (inputDirectory.equals("")){ inputDirectory = "./input";}
-        System.out.println(ANSI_PURPLE+"Looking in directory " +inputDirectory+ANSI_RESET);
+        if ("".equals(inputDirectory)) {
+            inputDirectory = "./input";
+        }
+        ListFiles filesListInput = new ListFiles(inputDirectory);
+        ArrayList<File> inputFiles = filesListInput.ListFilesWork();
+        System.out.println(CollorCodes.ANSI_PURPLE.ansiCode + "Looking in directory " + inputDirectory +
+                " founded " + filesListInput.getFileCount() + " files" + CollorCodes.ANSI_RESET.ansiCode);
 
-        System.out.println(ANSI_BLUE+"Entered output directory path [for default './output' pres ENTER]"+ANSI_RESET);
+        System.out.println(CollorCodes.ANSI_BLUE.ansiCode + "Entered output directory path [for default './output' pres ENTER]"
+                + CollorCodes.ANSI_RESET.ansiCode);
         String outputDirectory = in.nextLine();
-        if (outputDirectory.equals("")){ outputDirectory = "./output";}
-
-        System.out.println(ANSI_PURPLE+"Looking in directory " +outputDirectory+ANSI_RESET);
-
-        ArrayList<File> inputFiles = filesListInput.ListFiles(inputDirectory);
-        File outputFolder = new File(outputDirectory);
-        if (!outputFolder.exists()) {
-            System.out.print(ANSI_YELLOW + outputDirectory + " do not exist " + ANSI_RESET);
-             if(outputFolder.mkdir()) {
-                 System.out.println(ANSI_YELLOW + outputDirectory + " created " + ANSI_RESET);
-             }
+        if ("".equals(outputDirectory)) {
+            outputDirectory = "./output";
         }
 
+        File outputFolder = new File(outputDirectory);
+        if (!outputFolder.exists()) {
+            System.out.print(CollorCodes.ANSI_YELLOW.ansiCode + outputDirectory + " do not exist " + CollorCodes.ANSI_RESET.ansiCode);
+            if (outputFolder.mkdir()) {
+                System.out.println(CollorCodes.ANSI_YELLOW.ansiCode + outputDirectory + " created " + CollorCodes.ANSI_RESET.ansiCode);
+            }
+        }
 
-        ArrayList<File> outputFiles = filesListOutput.ListFiles(outputDirectory);
-        if(outputFiles.isEmpty()) {
-            if(!inputFiles.isEmpty()) {
+        ListFiles filesListOutput = new ListFiles(outputDirectory);
+        ArrayList<File> outputFiles = filesListOutput.ListFilesWork();
+        if (outputFiles.isEmpty()) {
+            if (!inputFiles.isEmpty()) {
                 int MAX_THREDS = 4;
                 ExecutorService pool = Executors.newFixedThreadPool(MAX_THREDS);
                 for (int i = 0; i < inputFiles.size(); i++) {
@@ -59,14 +50,14 @@ public class Main {
                 }
                 pool.shutdown();
             } else {
-                System.out.println(ANSI_RED+"Input direcroty "+inputDirectory+" is empty."+ANSI_RESET);
+                System.out.println(CollorCodes.ANSI_RED.ansiCode + "Input directory " + inputDirectory + " is empty." + CollorCodes.ANSI_RESET.ansiCode);
             }
         } else {
-            System.out.println(ANSI_RED+"Output direcroty "+outputDirectory+" is not empty."+ANSI_RESET);
-            outputFiles.forEach(el -> System.out.println(ANSI_RED + "Founded file " + el + ANSI_RESET));
+            System.out.println(CollorCodes.ANSI_RED.ansiCode + "Output directory " + outputDirectory + " is not empty." + CollorCodes.ANSI_RESET.ansiCode);
+            outputFiles.forEach(el -> System.out.println(CollorCodes.ANSI_RED.ansiCode + "Founded file " + el + CollorCodes.ANSI_RESET.ansiCode));
         }
-        System.out.println(ANSI_GREEN +"----------------------- Work Stats ---------------------- "+ ANSI_RESET);
-        inputFiles.forEach(el -> System.out.println(ANSI_GREEN + "Founded file " + el + ANSI_RESET));
-    }
+        System.out.println(CollorCodes.ANSI_GREEN.ansiCode + "----------------------- Work Stats ---------------------- " + CollorCodes.ANSI_RESET.ansiCode);
+        System.out.println(CollorCodes.ANSI_GREEN.ansiCode + "Input "+filesListInput.getFileCount()+" files "+CollorCodes.ANSI_RESET.ansiCode);
 
+    }
 }
