@@ -22,8 +22,7 @@ public class ListFiles {
         try {
             List<File> files = Files.list(Paths.get(this.directory))
                     .map(Path::toFile)
-                    .filter(File::isFile)
-                    .collect(Collectors.toList());
+                    .filter(File::isFile).toList();
             fileList.addAll(files);
         } catch (IOException e) {
             e.printStackTrace();

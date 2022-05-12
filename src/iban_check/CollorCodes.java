@@ -11,7 +11,7 @@ public enum CollorCodes {
     ANSI_CYAN("\u001B[36m"),
     ANSI_WHITE("\u001B[37m");
 
-    String ansiCode;
+    final String ansiCode;
 
     CollorCodes(String ansiCode) {
         this.ansiCode = ansiCode;

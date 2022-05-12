@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fd59c0-33f2-480b-bb24-f4bbfd847bc6" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/iban_check/CollorCodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/iban_check/ProgressPrint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/iban_check/ibandata.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iban_check/IBANcustomValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/IbanCustomValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/CollorCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/CollorCodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/IbanCustomValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/IbanCustomValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/iban_check/IbanData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/IbanData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/iban_check/ListFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/ListFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iban_check/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iban_check/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/ReadFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iban_check/Work.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/Work.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iban_check/WriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/WriteFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +130,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1652281495050</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="1">
+      <created>1652388377557</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1652388377557</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
