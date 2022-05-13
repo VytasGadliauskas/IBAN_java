@@ -28,20 +28,23 @@ public class IbanCustomValidator {
         if (!Pattern.compile("^[0-9A-Z]*$").matcher(iBan).matches()) {
             return false;
         }
-
         if (iBan.length() != this.lengthConstant) {
             return false;
         }
-
-        String swappedIban = iBan.substring(4) + iBan.substring(0, 4);
-        return swappedIban.chars()
-                .reduce(0, (int previousMod, int _char) -> {
-                    int value = Integer.parseInt(Character.toString((char) _char), 36);
-                    int factor = value < 10 ? 10 : 100;
-                    return ((factor * previousMod + value) % 97);
-                }) == 1;
+        return Mod97_10(iBan);
     }
 
+    public boolean Mod97_10(String iBan) {
+        String swappedIban = iBan.substring(4) + iBan.substring(0, 4);
+        char[] iBanChars = swappedIban.toCharArray();
+        int prevMod = 0;
+        for (char el : iBanChars) {
+            int value = Integer.parseInt(Character.toString(el), 36);
+            int factor = value < 10 ? 10 : 100;
+            prevMod = (factor * prevMod + value) % 97;
+        }
+        return prevMod == 1;
+    }
 
     public String getCountry() {
         return country;
