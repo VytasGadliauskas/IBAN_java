@@ -29,9 +29,9 @@ public class ReadFile  {
                 String line = myReader.nextLine();
                 if (!line.equals("")) {
                     linesCount++;
-                    IbanCustomValidator ibaNcustomValidator = new IbanCustomValidator(line);
-                    String outputFile = this.outputDirectory+"/"+ibaNcustomValidator.getCountry();
-                    if (ibaNcustomValidator.isValid()) {
+                    IbanCustomValidator ibancustomvalidator = new IbanCustomValidator(line);
+                    String outputFile = this.outputDirectory+"/"+ibancustomvalidator.getCountry();
+                    if (ibancustomvalidator.isValid()) {
                         line = line+";true";
                         goodIbanCount++;
                     } else {

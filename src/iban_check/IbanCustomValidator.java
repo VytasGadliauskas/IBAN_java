@@ -1,33 +1,49 @@
 package iban_check;
 
 
+import java.util.regex.Pattern;
+
 public class IbanCustomValidator {
-    private final String country;
-    private final boolean isValid;
+    private final String iBan;
+    private String country, bBan, ibanFormat;
+    private int lengthConstant;
 
     public IbanCustomValidator(String iBan) {
+        this.iBan = iBan;
         String countryCode = iBan.substring(0, 2);
-        String[] lineConst = IbanData.getIbanDataByCountryCode(countryCode);
+        String[] ibanConst = IbanData.getIbanDataByCountryCode(countryCode);
 
-        if (lineConst.length > 0) {
-            int lengthConstant = Integer.parseInt(lineConst[1]);
-            this.country = lineConst[0];
-            String bBan = lineConst[2];
-            String ibanFormat = lineConst[3];
-            this.isValid = iBan.length() == lengthConstant;
+        if (ibanConst.length > 0) {
+            this.lengthConstant = Integer.parseInt(ibanConst[1]);
+            this.country = ibanConst[0];
+            this.bBan = ibanConst[2];
+            this.ibanFormat = ibanConst[3];
         } else {
             this.country = "OTHER";
-            this.isValid = false;
-            System.out.println(CollorCodes.ANSI_RED.ansiCode + "IBAN number " + iBan + " not in COUNTRY table." + CollorCodes.ANSI_RESET.ansiCode);
+            this.lengthConstant = 0;
         }
     }
+
+    public boolean isValid() {
+        if (!Pattern.compile("^[0-9A-Z]*$").matcher(iBan).matches()) {
+            return false;
+        }
+
+        if (iBan.length() != this.lengthConstant) {
+            return false;
+        }
+
+        String swappedIban = iBan.substring(4) + iBan.substring(0, 4);
+        return swappedIban.chars()
+                .reduce(0, (int previousMod, int _char) -> {
+                    int value = Integer.parseInt(Character.toString((char) _char), 36);
+                    int factor = value < 10 ? 10 : 100;
+                    return ((factor * previousMod + value) % 97);
+                }) == 1;
+    }
+
 
     public String getCountry() {
         return country;
     }
-
-    public boolean isValid() {
-        return isValid;
-    }
-
 }
