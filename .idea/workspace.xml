@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="98fd59c0-33f2-480b-bb24-f4bbfd847bc6" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/iban_check/testIbanCustomValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iban_check/IbanCustomValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/IbanCustomValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iban_check/Testas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iban_check/Testas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBAN_java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IBAN_java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/file1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/file1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/CollorCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/CollorCodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/IbanCustomValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/IbanCustomValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/IbanData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/IbanData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/ListFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/ListFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/ProgressPrint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/ProgressPrint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/Work.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/Work.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/WriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iban_check/WriteFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iban_check/ibandata.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ibandata.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +58,17 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/README.txt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/iban_check/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/iban_check/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="28zKe3xfZ113vKXQXr2ap1EdENi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -46,26 +78,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/user/Nextcloud/Darbas/Mano/Programavimas/Portfelis/IBAN-java/IBAN_java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.44983277&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "full.screen.before.presentation.mode": "false",
+    "last_opened_file_path": "/home/vg/Nextcloud/Mano/Programavimas/Portfelis/IBAN-java/IBAN_java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.44983277",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -96,9 +130,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testIbanCustomValidator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IBAN_java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iban_check.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="iban_check" />
+      <option name="MAIN_CLASS_NAME" value="iban_check.testIbanCustomValidator" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.iban_check.Main" />
+        <item itemvalue="JUnit.testIbanCustomValidator" />
         <item itemvalue="Application.Testas" />
       </list>
     </recent_temporary>
@@ -160,7 +210,13 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1652401052053</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="1">
+      <created>1652403583183</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1652403583183</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
